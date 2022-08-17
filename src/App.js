@@ -12,6 +12,9 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="products" element={<Products />} />
         <Route path="*" element={<Error/>}/>
+        {/* <Route path='dashboard' element={<div>dashboard</div>}>
+          <Route path='stats' element={<div>status</div>}/>
+        </Route> */}
       </Routes>
       <footer>our footer</footer>
     </BrowserRouter>
