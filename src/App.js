@@ -6,7 +6,7 @@ import Error from "./pages/Error";
 function App() {
   return (
     <BrowserRouter>
-    <nav>our navbar</nav>
+    {/* <nav>our navbar</nav> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
@@ -16,7 +16,7 @@ function App() {
           <Route path='stats' element={<div>status</div>}/>
         </Route> */}
       </Routes>
-      <footer>our footer</footer>
+      {/* <footer>our footer</footer> */}
     </BrowserRouter>
   );
 }
