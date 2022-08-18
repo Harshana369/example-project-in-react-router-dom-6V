@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <NavLink to="/">Home</NavLink>
       <NavLink
-        to="/"
+        to="/about"
         style={({ isActive }) => {
-          return { color: isActive ? "red" : "grey" };
+          return { color: isActive ? "link active" : "link" };
         }}
       >
-        Home
+        About
       </NavLink>
-      <NavLink to="/about">About</NavLink>
       <NavLink to="/products">Products</NavLink>
     </nav>
   );
