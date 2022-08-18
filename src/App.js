@@ -3,21 +3,20 @@ import Home from './pages/Home'
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Error from "./pages/Error";
-function App() {
+import SharedLayout from './pages/SharedLayout'
+
+import React from 'react'
+
+const App = () => {
   return (
-    <BrowserRouter>
-    {/* <nav>our navbar</nav> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="products" element={<Products />} />
-        <Route path="*" element={<Error/>}/>
-        {/* <Route path='dashboard' element={<div>dashboard</div>}>
-          <Route path='stats' element={<div>status</div>}/>
-        </Route> */}
-      </Routes>
-      {/* <footer>our footer</footer> */}
-    </BrowserRouter>
+        <Route path="*" element={<Error />} />
+      </Route>
+    </Routes>
   );
 }
 
