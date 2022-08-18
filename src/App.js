@@ -5,9 +5,11 @@ import Products from "./pages/Products";
 import Error from "./pages/Error";
 import SharedLayout from './pages/SharedLayout'
 import SingleProduct from './pages/SingleProduct'
-import React from 'react'
-
+import React, { useState } from 'react'
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
 const App = () => {
+  const [user,setUser] = useState(null);
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
@@ -15,6 +17,8 @@ const App = () => {
         <Route path="about" element={<About />} />
         <Route path="products" element={<Products />} />
         <Route path="products/:productId" element={<SingleProduct />} />
+        <Route path="login" element={<Login setUser={setUser} />} />
+        <Route path="dashboard" element={<Dashboard user={user} />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

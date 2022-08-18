@@ -13,6 +13,8 @@ const Navbar = () => {
         About
       </NavLink>
       <NavLink to="/products">Products</NavLink>
+      <NavLink to="/login">Login</NavLink>
+      <NavLink to="/dashboard">Dashboard</NavLink>
     </nav>
   );
 };
